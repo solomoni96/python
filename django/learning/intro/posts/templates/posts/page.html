@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    {{ post.title }}
+{% endblock %}
+
+{% block content %}
+    <section>
+        <h1>{{ post.title }}</h1>
+        <a href="{% url 'posts:index' %}">Back to index</a>
+
+        <img class="banner" src="{{ post.banner.url }}" alt="{{ post.title }} image">
+
+        <time datetime="{{ post.date|date:'Y-m-d H:i:s'}}">
+            {{ post.date }}
+        </time>
+        <p>{{ post.body }}</p>
+    </section>
+{% endblock %}

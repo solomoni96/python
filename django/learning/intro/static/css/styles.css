@@ -1,0 +1,116 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #FAF9F6;
+    color: black;
+    font-size: 1rem;
+    font-family: 'Gill Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    padding: 1rem;
+    border-bottom: 2px solid #1976D2;
+    font-size: 1.25rem;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main {
+    padding: 2rem;
+    flex: 1;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+h1,
+h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+a {
+    text-decoration: none;
+    color: #1976D2;
+    transition: opacity 0.2s ease-in-out;
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+.banner {
+    display: block;
+    width: 100%;
+    max-width: 800px;
+    border-radius: 8px;
+}
+
+.form-with-validation {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-with-validation div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-with-validation input {
+    padding: 0.5rem;
+    max-width: 300px;
+    border: 1px solid #424242;
+}
+
+.form-submit {
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    width: 150px;
+    background-color: #1976D2;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+    color: #FAF9F6;
+}
+
+.form-submit:hover {
+    background-color: #5e9fdf;
+}
+
+.helptext {
+    font-size: 0.875rem;
+    margin-left: 1rem;
+}
+
+.helptext ul {
+    list-style-type: none;
+}
+
+.errorlist {
+    color: #E53935;
+    margin-left: 1rem;
+    font-size: 0.875rem;
+}
+
+.errorlist li::marker {
+    content: '\f071';
+    /* Font Awesome exclamation-circle */
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+}

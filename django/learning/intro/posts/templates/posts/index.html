@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Posts List
+{% endblock %}
+
+{% block content %}
+    <section>
+        <h1>Look at my posts!</h1>
+
+        {% for post in posts %}
+            <article class="post">
+                <h2>
+                    <a href="{% url 'posts:page' slug=post.slug %}">
+                        {{ post.title }}
+                    </a>
+                </h2>
+                <p> 
+                    <time datetime="{{ post.date|date:'Y-m-d H:i:s' }}">
+                        {{ post.date }}
+                    </time>
+
+                    by {{ post.author }}
+                </p>
+            </article>
+        {% endfor %}
+    </section>
+
+{% endblock %}
