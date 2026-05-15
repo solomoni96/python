@@ -1,0 +1,8 @@
+== WAGTAIL BLOG CUSTOMISATIONS ==
+
+Home app:
+- Custom fields added: subtitle, body, image
+
+Images app:
+- Set up of custom images app to include
+

@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load wagtailcore_tags wagtailimages_tags %}
+
+{% block content %}
+
+    <h1>{{ page.title }}</h1>
+    <h2>{{ page.subtitle }}</h2>
+
+    {% if page.body %}
+        {{ page.body|richtext }}
+    {% endif %}
+
+    <hr>
+    
+    {% if page.image %}
+        <figure>
+            {% image page.image fill-800x600 format-png %}
+            {% image page.image width-400 %}
+            {% image page.image width-400 format-webp-lossless %}
+
+            {% if page.image.caption %}
+                <figcaption>{{ page.image.caption }}</figcaption>
+            {% endif %}
+        </figure>
+    {% endif %}
+
+{% endblock content %}
